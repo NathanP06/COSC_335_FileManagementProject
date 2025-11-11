@@ -1,11 +1,32 @@
 ﻿using System;
 using System.IO;
 using System.Collections.Generic;
+using System.Windows.Forms;
 
 class Program
 {
+    [STAThread] // Required for dialog
     static void Main()
     {
+        SaveFileDialog saveDialog = new SaveFileDialog
+        {
+            Title = "Save your records file",
+            Filter = "Text Files (*.txt)|*.txt|All Files (*.*)|*.*",
+            FileName = "records.txt"
+        };
+
+        string filePath = string.Empty;
+        if (saveDialog.ShowDialog() == DialogResult.OK)
+        {
+            filePath = saveDialog.FileName;
+        }
+        else
+        {
+            Console.WriteLine("No file selected. Exiting...");
+            return;
+        }
+
+
         string filePath = "records.txt";
         Random random = new Random();
         
