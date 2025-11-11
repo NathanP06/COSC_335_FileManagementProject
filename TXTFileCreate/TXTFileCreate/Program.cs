@@ -26,8 +26,6 @@ class Program
             return;
         }
 
-
-        string filePath = "records.txt";
         Random random = new Random();
         
         List<string> firstNames = new List<string> { "Garth", "Olin", "Andre", "Lori", "Karla", "Harriet", "Cecilia", "Becky", "Merle", "Sydney", "Esmeralda", "Riley", "Elroy", "Huey", "Whitney", "Pat", "Melissa", "Viola", "Callie", "Roxie", "Lesa", "Derick", "Numbers", "Earnest", "Van", "Guadalupe", "Julius", "Rosa", "Gay", "Dollie", "Ashlee", "Karen", "Burl", "Roger", "Abigail", "Ramona", "Patsy", "Carlos", "Nolan", "Krista", "Lee", "Alvaro", "Terra", "Ramon", "Lino", "Diana", "Kathrine", "Theron", "Dalton", "Myra" };
