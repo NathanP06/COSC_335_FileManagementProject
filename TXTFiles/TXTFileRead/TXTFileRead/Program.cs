@@ -41,7 +41,7 @@ class Program
         else
         {
             Console.WriteLine("No file selected.");
-            break;
+            return;
         }
     }
 }
