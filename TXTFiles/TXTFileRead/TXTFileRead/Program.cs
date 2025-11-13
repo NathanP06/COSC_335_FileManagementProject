@@ -8,40 +8,37 @@ class Program
     [STAThread] // Required for using file dialogs
     static void Main()
     {
-        // Create and configure the OpenFileDialog
         OpenFileDialog openDialog = new OpenFileDialog
         {
             Title = "Select a text file to read",
             Filter = "Text Files (*.txt)|*.txt|All Files (*.*)|*.*"
         };
 
-        string filePath = string.Empty;
-
-        // Show the file selection dialog
         if (openDialog.ShowDialog() == DialogResult.OK)
         {
-            filePath = openDialog.FileName;
+            string filePath = openDialog.FileName;
+            List<string> lines = new List<string>(File.ReadAllLines(filePath));
 
-            // Create a list to store file contents
-            List<string> lines = new List<string>();
+            Console.WriteLine("\n--- File Contents (Table Format) ---\n");
+            Console.WriteLine("{0,-10} {1,-12} {2,-12} {3,-15} {4,-30} {5,-18} {6,-5} {7,-6}",
+                "First", "Last", "Birth Date", "Phone", "Address", "City", "State", "Zip");
+            Console.WriteLine(new string('-', 120));
 
-            // Read all lines from the file
-            foreach (string line in File.ReadAllLines(filePath))
-            {
-                lines.Add(line);
-            }
-
-            // Print out all the data
-            Console.WriteLine("\n--- File Contents ---");
             foreach (string line in lines)
             {
-                Console.WriteLine(line);
+                string[] parts = line.Split(',');
+
+                if (parts.Length >= 8)
+                {
+                    Console.WriteLine("{0,-10} {1,-12} {2,-12} {3,-15} {4,-30} {5,-18} {6,-5} {7,-6}",
+                        parts[0].Trim(), parts[1].Trim(), parts[2].Trim(), parts[3].Trim(),
+                        parts[4].Trim(), parts[5].Trim(), parts[6].Trim(), parts[7].Trim());
+                }
             }
         }
         else
         {
             Console.WriteLine("No file selected.");
-            return;
         }
     }
 }
