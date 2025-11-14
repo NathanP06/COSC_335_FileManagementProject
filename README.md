@@ -21,12 +21,15 @@ Repository layout (important files)
 What the program does
 ---------------------
 Each program does an individual seperate task:
-- `JSONFileCreate`
-- `JSONFileRead`
-- `JSONFileWrite`
-- `TXTFileCreate`
-- `TXTFileRead`
-- `TXTFileWrite`
+### JSON Files
+- `JSONFileCreate` — Creates a .JSON file that contains 100 randomly generated people records (including names, addresses, DOBs & phone numbers) and saves it to a designated location determined by the user during program execution.
+- `JSONFileRead` — Deserializes a .JSON file, determinted by the user during program execution, to a list and then prints the data in the style of a table using the .Split(", ") function to seperate each part.
+- `JSONFileWrite` — Appends 50 new randomly generated people records (including names, addresses, DOBs & phone numbers) to a .JSON file selected by the user during program execution
+
+### TXT Files
+- `TXTFileCreate` — Creates a .txt file that contains 100 randomly generated people records (including names, addresses, DOBs & phone numbers) and saves it to a designated location determined by the user during program execution.
+- `TXTFileRead` — Reads a .txt file, determinted by the user during program execution to a list, using each line-break to seperate individual people records, and prints the data in table format using the .Split(", ") function to seperate each part
+- `TXTFileWrite` — Appends 50 new randomly generated people records (including names, addresses, DOBs & phone numbers) to a .txt file selected by the user during program execution
 
 How to build and run (Windows PowerShell)
 ---------------------------------------
@@ -48,14 +51,14 @@ dotnet run
 Directory List:
 ---
 - JSON Files
-    - Create: ```"C:\Users\natha\OneDrive\Documents\Coding Projects\C# Projects\COSC_335_FileManagementProject\JSONFileCreate\JSONFileCreate"```
-    - Read: ```"C:\Users\natha\OneDrive\Documents\Coding Projects\C# Projects\COSC_335_FileManagementProject\JSONFileRead\JSONFileRead"```
-    - Write: ```"C:\Users\natha\OneDrive\Documents\Coding Projects\C# Projects\COSC_335_FileManagementProject\JSONFileWrite\JSONFileWrite"```
+    - Create: ```"C:\Users\natha\OneDrive\Documents\Coding Projects\C# Projects\COSC_335_FileManagementProject\JSONFiles\JSONFileCreate\JSONFileCreate"```
+    - Read: ```"C:\Users\natha\OneDrive\Documents\Coding Projects\C# Projects\COSC_335_FileManagementProject\JSONFiles\JSONFileRead\JSONFileRead"```
+    - Write: ```"C:\Users\natha\OneDrive\Documents\Coding Projects\C# Projects\COSC_335_FileManagementProject\JSONFiles\JSONFileWrite\JSONFileWrite"```
 
 - .txt Files
-    - Create: ```"C:\Users\natha\OneDrive\Documents\Coding Projects\C# Projects\COSC_335_FileManagementProject\TXTFileCreate\TXTFileCreate"```
-    - Read: ```"C:\Users\natha\OneDrive\Documents\Coding Projects\C# Projects\COSC_335_FileManagementProject\TXTFileRead\TXTFileRead"```
-    - Write: ```"C:\Users\natha\OneDrive\Documents\Coding Projects\C# Projects\COSC_335_FileManagementProject\TXTFileWrite\TXTFileWrite"```
+    - Create: ```"C:\Users\natha\OneDrive\Documents\Coding Projects\C# Projects\COSC_335_FileManagementProject\TXTFiles\TXTFileCreate\TXTFileCreate"```
+    - Read: ```"C:\Users\natha\OneDrive\Documents\Coding Projects\C# Projects\COSC_335_FileManagementProject\TXTFiles\TXTFileRead\TXTFileRead"```
+    - Write: ```"C:\Users\natha\OneDrive\Documents\Coding Projects\C# Projects\COSC_335_FileManagementProject\TXTFiles\TXTFileWrite\TXTFileWrite"```
 
 Authorship:
 ------
