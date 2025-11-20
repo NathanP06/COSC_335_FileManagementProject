@@ -41,7 +41,7 @@ class Program
         List<Person> people = new List<Person>();
         
         // Append 50 new records to the list "people"
-        for (int i = 0; i < 100; i++)
+        for (int i = 0; i < 50; i++)
         {
             string firstName = firstNames[random.Next(firstNames.Count)];
             string lastName = lastNames[random.Next(lastNames.Count)];
